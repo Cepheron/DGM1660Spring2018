@@ -1,6 +1,6 @@
 //Maya ASCII 2017ff05 scene
 //Name: Helicopter.ma
-//Last modified: Thu, Jan 18, 2018 03:40:46 PM
+//Last modified: Thu, Jan 18, 2018 03:41:30 PM
 //Codeset: 1252
 requires maya "2017ff05";
 currentUnit -l centimeter -a degree -t film;
@@ -13,13 +13,13 @@ fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "32E6F3E0-4236-FBCA-C508-81859E123130";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.94566116652295396 13.735545060749764 23.775113539926572 ;
+	setAttr ".t" -type "double3" 1.5460072274747756 9.9118050171369454 17.424115601532723 ;
 	setAttr ".r" -type "double3" -30.938352729883544 714.5999999998985 1.3976956961139984e-015 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E195939F-4F17-0094-DA3C-8DA45199489B";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 28.450073039484565;
+	setAttr ".coi" 21.012561484702861;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
