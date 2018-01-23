@@ -1,6 +1,6 @@
 //Maya ASCII 2017ff05 scene
 //Name: Double Bladed Weapon.ma
-//Last modified: Tue, Jan 23, 2018 03:43:15 PM
+//Last modified: Tue, Jan 23, 2018 03:45:44 PM
 //Codeset: 1252
 requires maya "2017ff05";
 currentUnit -l centimeter -a degree -t film;
@@ -13,13 +13,13 @@ fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "93DC5937-4EB2-F678-24DE-479BD36CA224";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -4.6929840367962203 4.5980428937757587 -0.25962337928113122 ;
-	setAttr ".r" -type "double3" -33.938352729987649 -452.59999999997535 0 ;
+	setAttr ".t" -type "double3" 11.597521365260004 1.594709612784095 0.56220533019530805 ;
+	setAttr ".r" -type "double3" -0.3383527304059798 -272.999999999902 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "5A0398C4-4E7B-EB5B-433F-6BA92FBEED76";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 5.5036556976772424;
+	setAttr ".coi" 11.745461033918225;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
