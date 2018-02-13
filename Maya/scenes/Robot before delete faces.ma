@@ -1,6 +1,6 @@
 //Maya ASCII 2017ff05 scene
-//Name: Robot.ma
-//Last modified: Tue, Feb 13, 2018 04:00:48 PM
+//Name: Robot before delete faces.ma
+//Last modified: Tue, Feb 13, 2018 03:50:44 PM
 //Codeset: 1252
 requires maya "2017ff05";
 currentUnit -l centimeter -a degree -t film;
@@ -13,13 +13,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "F41D5C0B-4AE4-4257-280B-50B2B8B21D41";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 5.0962058171720184 8.1876204180638084 13.250992134820629 ;
-	setAttr ".r" -type "double3" -5.7383527316888143 -700.1999999997895 -6.3382526506311375e-016 ;
+	setAttr ".t" -type "double3" -0.27157503268976863 6.4386064738949349 -11.55402128221732 ;
+	setAttr ".r" -type "double3" 1.4616472683118569 -537.79999999980168 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "D4448C40-49F5-A99A-8E2E-8EABAAAAE071";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 14.663605407423583;
+	setAttr ".coi" 11.089225445392852;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -1574,7 +1574,7 @@ createNode mesh -n "pCubeShape13" -p "pCube13";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 4 ".pt";
+	setAttr -s 31 ".pt";
 	setAttr ".pt[3]" -type "float3" 2.9802322e-007 1.7881393e-006 -9.5367432e-007 ;
 	setAttr ".pt[5]" -type "float3" 2.9802322e-007 1.7881393e-006 -9.5367432e-007 ;
 	setAttr ".pt[12]" -type "float3" 2.9802322e-007 1.7881393e-006 -9.5367432e-007 ;
@@ -1995,7 +1995,7 @@ createNode mesh -n "polySurfaceShape1" -p "pCube13";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube14";
 	rename -uid "8CC377FC-462E-7295-41B6-0B9C7E3903BD";
-	setAttr ".t" -type "double3" -0.012446579764462395 7.2857680450718361 0 ;
+	setAttr ".t" -type "double3" -0.012446579764462395 8.0763663039901985 0 ;
 	setAttr ".s" -type "double3" 0.81570344987418286 0.38439792627606684 3.113684370589568 ;
 createNode mesh -n "pCubeShape14" -p "pCube14";
 	rename -uid "4486B129-473B-0C00-0A31-BEBAF71DB7E4";
@@ -2629,19 +2629,19 @@ createNode mesh -n "pasted__pasted__pCylinderShape4" -p "|group40|pasted__group3
 	setAttr ".pt[81]" -type "float3" -0.11559016 0.078386992 -2.0669127e-008 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "4811C60A-424F-DEA7-5854-E4AC8644B5B0";
+	rename -uid "B175D1AD-460E-ACD9-C6D8-3BA8E65F5A47";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "614D2915-40F2-30AA-21E7-22A47A8AD04B";
+	rename -uid "4A834CBC-441C-57D4-42EA-15A7871EE7E7";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "8058D25F-4C89-F210-ABA0-2EA8A1AAD553";
+	rename -uid "0A8A9D3E-432D-CE4C-2876-F698454EBFC1";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "674CE27E-47D1-3893-8206-8082A5F5714D";
+	rename -uid "84452183-46C3-90D6-7E52-789481E6CD8E";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "20E5804B-49E6-3966-3FC4-96909AF8DA54";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "192428EA-4486-D312-C17A-C2BEFB950C1E";
+	rename -uid "8242EF86-433E-157A-5BA2-5CA9A09ED551";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "F5A4D36B-4E43-7280-E551-57B002A0ECB8";
 	setAttr ".g" yes;
@@ -5299,4 +5299,4 @@ connectAttr "pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCu
 		 -na;
 connectAttr "|group40|pasted__group34|pasted__pasted__pCylinder4|pasted__pasted__pCylinderShape4.iog" ":initialShadingGroup.dsm"
 		 -na;
-// End of Robot.ma
+// End of Robot before delete faces.ma
