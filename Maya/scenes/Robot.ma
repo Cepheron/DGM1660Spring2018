@@ -1,6 +1,6 @@
 //Maya ASCII 2017ff05 scene
 //Name: Robot.ma
-//Last modified: Thu, Mar 15, 2018 03:05:47 PM
+//Last modified: Thu, Mar 15, 2018 03:08:20 PM
 //Codeset: 1252
 requires maya "2017ff05";
 currentUnit -l centimeter -a degree -t film;
@@ -13,8 +13,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "F41D5C0B-4AE4-4257-280B-50B2B8B21D41";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -21.68331911862894 7.5015428336295988 12.673409459585995 ;
-	setAttr ".r" -type "double3" -7.538352734205775 -1859.3999999987191 0 ;
+	setAttr ".t" -type "double3" -20.948895896487304 8.0425352106907724 13.702783608509892 ;
+	setAttr ".r" -type "double3" -8.738352734207794 -1856.599999998703 -1.4444441239048693e-015 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "D4448C40-49F5-A99A-8E2E-8EABAAAAE071";
 	setAttr -k off ".v" no;
@@ -15667,7 +15667,8 @@ createNode animCurveTU -n "Torso_scaleZ";
 createNode animCurveTA -n "Waist_rotateX";
 	rename -uid "9F17D8CA-4988-19ED-149E-C4BD38360D36";
 	setAttr ".tan" 18;
-	setAttr -s 3 ".ktv[0:2]"  1 -10 12 10 24 -10;
+	setAttr -s 3 ".ktv[0:2]"  1 -14.999999999999998 12 14.999999999999998
+		 24 -14.999999999999998;
 createNode animCurveTA -n "Waist_rotateY";
 	rename -uid "BDC4DD18-48F8-17D8-54B2-46B2CB77ED06";
 	setAttr ".tan" 18;
