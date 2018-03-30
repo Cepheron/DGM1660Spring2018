@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: Bank Model.ma
-//Last modified: Fri, Mar 30, 2018 05:07:02 PM
+//Last modified: Fri, Mar 30, 2018 05:13:33 PM
 //Codeset: 1252
 requires maya "2017";
 currentUnit -l centimeter -a degree -t film;
@@ -13,13 +13,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "C5FF610B-4021-0132-8F5C-AD9F413B832A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.2262978986780446 11.0303307110098 1.5576099962626746 ;
-	setAttr ".r" -type "double3" -9.9383527142749344 392.59999999962992 4.7191905037445635e-016 ;
+	setAttr ".t" -type "double3" -3.5677870311324122 3.1594017677309569 10.83460675330516 ;
+	setAttr ".r" -type "double3" -13.538352713694927 359.40000000027527 3.230427974776746e-016 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "7C8B340A-4A46-3892-9373-7DBF01330F81";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 2.4086029139345091;
+	setAttr ".coi" 9.6828010439368395;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -51,7 +51,7 @@ createNode camera -s -n "frontShape" -p "front";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
-	setAttr ".ow" 7.824914967636059;
+	setAttr ".ow" 19.824914967636058;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
@@ -101,15 +101,15 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 0.25 ;
+	setAttr ".pv" -type "double2" 0.5 0.375 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[44:51]" -type "float3"  0 0 -1.4901161e-008 0 0 -1.4901161e-008 
-		0 0 7.4505806e-009 0 0 7.4505806e-009 0 0.33604801 -1.4901161e-008 0 0.33604801 -1.4901161e-008 
-		0 0.33604801 7.4505806e-009 0 0.33604801 7.4505806e-009;
+	setAttr -s 8 ".pt[44:51]" -type "float3"  0 0 -0.091446571 0 0 -0.091446571 
+		0 0 0.091446549 0 0 0.091446549 0 0.33604801 -0.091446571 0 0.33604801 -0.091446571 
+		0 0.33604801 0.091446549 0 0.33604801 0.091446549;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCylinder1";
 	rename -uid "57C85F19-4AD1-6931-878B-2C9FDF7F1453";
@@ -134,6 +134,21 @@ createNode mesh -n "pCylinderShape1" -p "pCylinder1";
 		-0.085668147 -0.039969932 -0.10007644 -0.082299799 -0.0090319393 -0.11492528 -0.078777879 
 		0.023319623 -0.10990249 -0.075711325 0.051491097 -0.085876577 -0.073629275 0.070611976 
 		-0.047001794 -0.072893128 0.077374823 -2.9324179e-008;
+	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "pPipe1";
+	rename -uid "FE11D86B-40BA-0C78-7D9B-389D34867555";
+	setAttr ".t" -type "double3" -4.3 1.7540276095000809 2.3 ;
+	setAttr ".s" -type "double3" 0.099217068207266543 3.5 0.099217068207266543 ;
+createNode mesh -n "pPipeShape1" -p "pPipe1";
+	rename -uid "EF4726D3-4811-AA80-3D69-0C92FC8043FE";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "D920DFE2-4594-BC1E-05EE-949590BD3B4B";
@@ -558,6 +573,9 @@ createNode polyTweak -n "polyTweak12";
 		 0.115495 0.036265083 0.7225318 0.095745444 0.10252479 0.68351096 0.059661791 0.15105699
 		 0.63357139 0.013482016 0.17347009 0.58135021 -0.034808096 0.16588859 0.53587562 -0.076858997
 		 0.12962347 0.50501066 -0.10539997 0.07094527 0.49409327 -0.115495 3.1189732e-008;
+createNode polyPipe -n "polyPipe1";
+	rename -uid "A91C7E5A-4C7D-3C2E-A282-7BA79056DCAB";
+	setAttr ".sc" 0;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -578,7 +596,7 @@ select -ne :defaultRenderUtilityList1;
 select -ne :defaultRenderingList1;
 select -ne :defaultTextureList1;
 select -ne :initialShadingGroup;
-	setAttr -s 2 ".dsm";
+	setAttr -s 3 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
@@ -594,6 +612,7 @@ select -ne :ikSystem;
 connectAttr "polyPlane1.out" "pPlaneShape1.i";
 connectAttr "polyExtrudeFace7.out" "pCubeShape1.i";
 connectAttr "polyExtrudeFace14.out" "pCylinderShape1.i";
+connectAttr "polyPipe1.out" "pPipeShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
@@ -688,4 +707,5 @@ connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCylinderShape1.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pPipeShape1.iog" ":initialShadingGroup.dsm" -na;
 // End of Bank Model.ma
