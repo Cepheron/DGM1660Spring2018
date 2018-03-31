@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: Bank Model.ma
-//Last modified: Fri, Mar 30, 2018 08:32:36 PM
+//Last modified: Fri, Mar 30, 2018 08:37:01 PM
 //Codeset: 1252
 requires maya "2017";
 requires -nodeType "type" -nodeType "shellDeformer" -nodeType "vectorAdjust" -nodeType "vectorExtrude"
@@ -15,13 +15,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "C5FF610B-4021-0132-8F5C-AD9F413B832A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.12046056146331052 12.932396781158257 13.831705500853568 ;
-	setAttr ".r" -type "double3" -15.938352713717792 374.19999999916479 0 ;
+	setAttr ".t" -type "double3" -1.3490512760188618 9.3282443327722753 15.687246681005169 ;
+	setAttr ".r" -type "double3" -9.9383527137178085 366.99999999916429 -1.0013875287430913e-016 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "7C8B340A-4A46-3892-9373-7DBF01330F81";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 15.525496152921827;
+	setAttr ".coi" 15.525496152922617;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -3000,7 +3000,7 @@ createNode groupId -n "groupid3";
 	rename -uid "E021E28C-49CC-FC23-7054-EE8951EB4569";
 createNode blinn -n "typeBlinn1";
 	rename -uid "5B04434B-42F4-8516-050C-8BA162A6755F";
-	setAttr ".c" -type "float3" 1 1 1 ;
+	setAttr ".c" -type "float3" 0.2543 0.1117 0.0098999999 ;
 createNode shadingEngine -n "typeBlinn1SG";
 	rename -uid "E5D94BE1-473C-64A8-0D53-89A0B772DD37";
 	setAttr ".ihi" 0;
