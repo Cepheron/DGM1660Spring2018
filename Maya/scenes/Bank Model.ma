@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: Bank Model.ma
-//Last modified: Sat, Mar 31, 2018 01:27:04 PM
+//Last modified: Sat, Mar 31, 2018 01:27:52 PM
 //Codeset: 1252
 requires maya "2017";
 requires -nodeType "type" -nodeType "shellDeformer" -nodeType "vectorAdjust" -nodeType "vectorExtrude"
@@ -15,13 +15,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "C5FF610B-4021-0132-8F5C-AD9F413B832A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.3051769967919018 4.4358061765588808 8.6861939440332243 ;
-	setAttr ".r" -type "double3" 341.66164728562046 7.800000000002866 -2.0064103041282455e-016 ;
+	setAttr ".t" -type "double3" 0.52419254678408311 1.8222560284798652 10.787681470085332 ;
+	setAttr ".r" -type "double3" 358.46164728561723 10.600000000002826 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "7C8B340A-4A46-3892-9373-7DBF01330F81";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 9.2442309092194321;
+	setAttr ".coi" 10.986437328900783;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -380,8 +380,8 @@ createNode mesh -n "pasted__pasted__pPipeShape1" -p "pasted__pasted__pPipe1";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pPipe2";
 	rename -uid "1FA2FA6F-4CBB-B076-0870-708BC215B034";
-	setAttr ".t" -type "double3" -0.18222304480057583 1.3004921141845687 0.51804985142547189 ;
-	setAttr ".s" -type "double3" 0.027249377649396344 0.03814994372621093 0.027249377649396344 ;
+	setAttr ".t" -type "double3" -0.18222304480057583 1.4780387327649955 0.51804985142547189 ;
+	setAttr ".s" -type "double3" 0.0302224762876807 0.041885000114382426 0.027249377649396344 ;
 createNode mesh -n "pPipeShape2" -p "pPipe2";
 	rename -uid "4459D874-479C-5D2D-2E6B-829FB7552E1E";
 	setAttr -k off ".v";
@@ -562,8 +562,8 @@ createNode transform -n "group5";
 	setAttr ".sp" -type "double3" -0.18222305129733374 1.3630885546261271 6.3037792402701953 ;
 createNode transform -n "pasted__pPipe2" -p "group5";
 	rename -uid "B31BF429-4901-B99F-ECE9-BA88B63359C7";
-	setAttr ".t" -type "double3" -0.18222304480057583 1.3004921141845687 0.51804985142547189 ;
-	setAttr ".s" -type "double3" 0.027249377649396344 0.03814994372621093 0.027249377649396344 ;
+	setAttr ".t" -type "double3" -0.18222304480057583 1.4780387327649955 0.51804985142547189 ;
+	setAttr ".s" -type "double3" 0.0302224762876807 0.041885000114382426 0.027249377649396344 ;
 createNode mesh -n "pasted__pPipeShape2" -p "pasted__pPipe2";
 	rename -uid "B1692680-4042-E8BC-8A8D-9D851A3E106E";
 	setAttr -k off ".v";
@@ -739,8 +739,8 @@ createNode mesh -n "pasted__pPipeShape2" -p "pasted__pPipe2";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube2";
 	rename -uid "8A79BA3E-44E9-50CD-1C31-A4866AE420E7";
-	setAttr ".t" -type "double3" 0 1.2713045523242852 0.31236934726793741 ;
-	setAttr ".s" -type "double3" 1.608 2.042 0.243 ;
+	setAttr ".t" -type "double3" 0 1.448851170904712 0.31236934726793741 ;
+	setAttr ".s" -type "double3" 1.7834441026827332 2.2419212685445218 0.243 ;
 createNode mesh -n "pCubeShape2" -p "pCube2";
 	rename -uid "9211C598-4D30-7520-64BA-658ACC3EFB58";
 	setAttr -k off ".v";
@@ -766,8 +766,8 @@ createNode mesh -n "pCubeShape2" -p "pCube2";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube3";
 	rename -uid "9DA3FA7B-4211-3266-2C06-E9907A37E4A1";
-	setAttr ".t" -type "double3" 0 1.271 0.27962046488640063 ;
-	setAttr ".s" -type "double3" 1.8109476409243142 2.17739540981241 0.243 ;
+	setAttr ".t" -type "double3" 0 1.4485466185804268 0.27962046488640063 ;
+	setAttr ".s" -type "double3" 2.0085347577572605 2.3905725167921927 0.243 ;
 createNode mesh -n "pCubeShape3" -p "pCube3";
 	rename -uid "4E26B2A6-4FBC-6343-8B61-1D9E40E6C327";
 	setAttr -k off ".v";
