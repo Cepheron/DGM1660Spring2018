@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: Bank Model.ma
-//Last modified: Sat, Mar 31, 2018 01:33:58 PM
+//Last modified: Sat, Mar 31, 2018 01:35:17 PM
 //Codeset: 1252
 requires maya "2017";
 requires -nodeType "type" -nodeType "shellDeformer" -nodeType "vectorAdjust" -nodeType "vectorExtrude"
@@ -15,13 +15,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "C5FF610B-4021-0132-8F5C-AD9F413B832A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.50670529155797261 8.147801936362935 9.9480536899117169 ;
-	setAttr ".r" -type "double3" 329.66164728549336 -6.1999999999982087 1.9995420695181743e-016 ;
+	setAttr ".t" -type "double3" 1.5263403628286447 7.1111395152335177 17.102164243827914 ;
+	setAttr ".r" -type "double3" 346.46164728544625 0.60000000000124021 5.715372570759146e-016 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "7C8B340A-4A46-3892-9373-7DBF01330F81";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 9.2442309092186683;
+	setAttr ".coi" 15.517761684157247;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -78,23 +78,6 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
-createNode transform -n "pPlane1";
-	rename -uid "B932BBE6-44F8-982D-D748-ABB0EE773836";
-	setAttr ".t" -type "double3" 0 5 -4.792327548729455 ;
-	setAttr ".r" -type "double3" 90 0 0 ;
-	setAttr ".s" -type "double3" 10 10 10 ;
-createNode mesh -n "pPlaneShape1" -p "pPlane1";
-	rename -uid "5C385E2C-4360-9F96-C130-5AA0BC49457F";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.95000001788139343 0.95000001788139343 ;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube1";
 	rename -uid "9A2A54DA-409C-294E-5A47-B68DD9D205D4";
 	setAttr ".t" -type "double3" 0 3.7194479481109184 0 ;
@@ -2856,9 +2839,6 @@ createNode shadingEngine -n "lambert2SG";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo1";
 	rename -uid "07D1590D-443A-E530-8A1F-ED89D3296148";
-createNode polyPlane -n "polyPlane1";
-	rename -uid "EB8A6448-4308-0664-9BA4-5AA4A4BCA98D";
-	setAttr ".cuv" 2;
 createNode lambert -n "lambert3";
 	rename -uid "F9CA52AA-4D02-E78E-DF14-50A8E9D41653";
 createNode shadingEngine -n "lambert3SG";
@@ -7255,7 +7235,6 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
-connectAttr "polyPlane1.out" "pPlaneShape1.i";
 connectAttr "polyExtrudeFace38.out" "pCubeShape1.i";
 connectAttr "polyExtrudeFace14.out" "pCylinderShape1.i";
 connectAttr "polyExtrudeFace17.out" "pPipeShape1.i";
@@ -7322,7 +7301,6 @@ connectAttr "lambert2SG.msg" "materialInfo1.sg";
 connectAttr "lambert2.msg" "materialInfo1.m";
 connectAttr "file1.oc" "lambert3.c";
 connectAttr "lambert3.oc" "lambert3SG.ss";
-connectAttr "pPlaneShape1.iog" "lambert3SG.dsm" -na;
 connectAttr "lambert3SG.msg" "materialInfo2.sg";
 connectAttr "lambert3.msg" "materialInfo2.m";
 connectAttr "file1.msg" "materialInfo2.t" -na;
