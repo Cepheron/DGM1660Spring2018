@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: Bank Model.ma
-//Last modified: Fri, Mar 30, 2018 07:09:47 PM
+//Last modified: Fri, Mar 30, 2018 07:11:59 PM
 //Codeset: 1252
 requires maya "2017";
 currentUnit -l centimeter -a degree -t film;
@@ -13,13 +13,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "C5FF610B-4021-0132-8F5C-AD9F413B832A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.2013769956467295 3.5018951673169436 10.158382793001099 ;
-	setAttr ".r" -type "double3" -19.538352713656387 357.80000000015934 4.973282414639389e-017 ;
+	setAttr ".t" -type "double3" 0.31335694203946352 1.9570331647841215 10.81145778765848 ;
+	setAttr ".r" -type "double3" -11.138352713634527 357.80000000011609 1.9893129658558133e-016 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "7C8B340A-4A46-3892-9373-7DBF01330F81";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 9.6828010439369478;
+	setAttr ".coi" 13.710710427503779;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -77,7 +77,7 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "pPlane1";
 	rename -uid "B932BBE6-44F8-982D-D748-ABB0EE773836";
-	setAttr ".t" -type "double3" 0 5 -2.0539142301394353 ;
+	setAttr ".t" -type "double3" 0 5 -4.792327548729455 ;
 	setAttr ".r" -type "double3" 90 0 0 ;
 	setAttr ".s" -type "double3" 10 10 10 ;
 createNode mesh -n "pPlaneShape1" -p "pPlane1";
@@ -418,6 +418,21 @@ createNode mesh -n "pasted__pasted__pPipeShape1" -p "pasted__pasted__pPipe1";
 		-0.39669836 1.9758488e-009 -0.34187832 -0.46634927 -3.1573997e-008 -0.17973411 -0.46634927 
 		1.9758488e-009 -0.17973411 -0.49034658 -3.1573997e-008 -2.7734434e-006 -0.49034658 
 		1.9758488e-009 -2.7734434e-006;
+	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "pCube2";
+	rename -uid "0EE546BB-4AE9-84C8-23EB-F8AAF1673BC0";
+	setAttr ".t" -type "double3" 0 1.2695212917016923 6.1577599699114423 ;
+	setAttr ".s" -type "double3" 1.6080717369986746 2.04200900813303 0.24327256908974224 ;
+createNode mesh -n "pCubeShape2" -p "pCube2";
+	rename -uid "FF476C4B-4B59-11E9-9ED5-9583A899B1FA";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "D920DFE2-4594-BC1E-05EE-949590BD3B4B";
@@ -1834,6 +1849,9 @@ createNode polyExtrudeFace -n "pasted__pasted__polyExtrudeFace15";
 createNode polyPipe -n "pasted__pasted__polyPipe1";
 	rename -uid "5BDDDE42-478B-28DE-5F70-E4948E44FB99";
 	setAttr ".sc" 0;
+createNode polyCube -n "polyCube2";
+	rename -uid "F2429376-4D8F-AFA5-9820-C7979D6C81E7";
+	setAttr ".cuv" 4;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -1854,7 +1872,7 @@ select -ne :defaultRenderUtilityList1;
 select -ne :defaultRenderingList1;
 select -ne :defaultTextureList1;
 select -ne :initialShadingGroup;
-	setAttr -s 6 ".dsm";
+	setAttr -s 7 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
@@ -1877,6 +1895,7 @@ connectAttr "pasted__polyExtrudeFace20.out" "|group3|pasted__pPipe1|pasted__pPip
 		;
 connectAttr "pasted__pasted__polyExtrudeFace17.out" "pasted__pasted__pPipeShape1.i"
 		;
+connectAttr "polyCube2.out" "pCubeShape2.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
@@ -2066,4 +2085,5 @@ connectAttr "|group2|pasted__pPipe1|pasted__pPipeShape1.iog" ":initialShadingGro
 connectAttr "|group3|pasted__pPipe1|pasted__pPipeShape1.iog" ":initialShadingGroup.dsm"
 		 -na;
 connectAttr "pasted__pasted__pPipeShape1.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape2.iog" ":initialShadingGroup.dsm" -na;
 // End of Bank Model.ma
