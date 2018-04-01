@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: Bank Model.ma
-//Last modified: Sun, Apr 01, 2018 01:55:44 PM
+//Last modified: Sun, Apr 01, 2018 01:56:33 PM
 //Codeset: 1252
 requires maya "2017";
 requires -nodeType "type" -nodeType "shellDeformer" -nodeType "vectorAdjust" -nodeType "vectorExtrude"
@@ -15,7 +15,7 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "C5FF610B-4021-0132-8F5C-AD9F413B832A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 3.4931322363599571 12.32945780229689 3.0162449711163095 ;
+	setAttr ".t" -type "double3" 2.0166791566773425 10.981162466838466 4.6009730372873054 ;
 	setAttr ".r" -type "double3" 335.06164728375734 30.200000000009368 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "7C8B340A-4A46-3892-9373-7DBF01330F81";
@@ -11302,6 +11302,15 @@ createNode polyTweakUV -n "polyTweakUV32";
 		 0.20022535 -0.46081918 0.25286531 -0.50985104 0.28128946 -0.57432628 0.28013936 -0.64341438
 		 0.24764973 -0.70437455 0.18804961 -0.74218398 0.12907749 -0.74906343 0.064076781
 		 -0.73692352;
+createNode polyTweakUV -n "polyTweakUV33";
+	rename -uid "5A0BD895-4F8D-0152-6198-30879ECAB084";
+	setAttr ".uopa" yes;
+	setAttr -s 18 ".uvtk[0:17]" -type "float2" -0.13564137 -0.00074178103
+		 -0.096139312 -0.0055177226 -0.12131396 0.012340099 -0.10425866 0.009534955 -0.1118274
+		 0.0040112138 -0.11513138 0.0079041123 -0.11517856 -0.0011413097 -0.1199885 0.0032076836
+		 -0.11948362 -0.0060819983 -0.12439382 -0.0017082691 -0.104155 0.0077404398 -0.10624123
+		 0.0057810545 -0.13228309 0.023096796 -0.11376031 0.020197481 -0.097931921 0.037526108
+		 -0.13100481 0.037135713 -0.13729334 -0.030820847 -0.091367006 -0.03258951;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -11357,7 +11366,8 @@ connectAttr "polyTweakUV27.out" "pCubeShape2.i";
 connectAttr "polyTweakUV27.uvtk[0]" "pCubeShape2.uvst[0].uvtw";
 connectAttr "polyTweakUV26.out" "pCubeShape3.i";
 connectAttr "polyTweakUV26.uvtk[0]" "pCubeShape3.uvst[0].uvtw";
-connectAttr "polyExtrudeFace32.out" "pCubeShape4.i";
+connectAttr "polyTweakUV33.out" "pCubeShape4.i";
+connectAttr "polyTweakUV33.uvtk[0]" "pCubeShape4.uvst[0].uvtw";
 connectAttr "shellDeformer1.og[0]" "typeMeshShape1.i";
 connectAttr "vectorAdjust1GroupId.id" "typeMeshShape1.iog.og[0].gid";
 connectAttr "vectorAdjust1Set.mwc" "typeMeshShape1.iog.og[0].gco";
@@ -12085,6 +12095,7 @@ connectAttr "polyMapCut65.out" "polyTweakUV31.ip";
 connectAttr "polyTweak37.out" "polyMapCut66.ip";
 connectAttr "polyExtrudeFace14.out" "polyTweak37.ip";
 connectAttr "polyMapCut66.out" "polyTweakUV32.ip";
+connectAttr "polyExtrudeFace32.out" "polyTweakUV33.ip";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "typeBlinnSG.pa" ":renderPartition.st" -na;
