@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: Bank Model.ma
-//Last modified: Sat, Mar 31, 2018 01:55:34 PM
+//Last modified: Sat, Mar 31, 2018 01:55:55 PM
 //Codeset: 1252
 requires maya "2017";
 requires -nodeType "type" -nodeType "shellDeformer" -nodeType "vectorAdjust" -nodeType "vectorExtrude"
@@ -15,13 +15,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "C5FF610B-4021-0132-8F5C-AD9F413B832A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -4.4824749264442563 3.1122663040355798 1.1703273818590589 ;
-	setAttr ".r" -type "double3" 323.66164728493339 -170.59999999983691 0 ;
+	setAttr ".t" -type "double3" -4.735009665214351 5.9553136352743312 7.5860395015374582 ;
+	setAttr ".r" -type "double3" 324.26164728492711 -4.9999999998335767 2.1949839200049948e-015 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "7C8B340A-4A46-3892-9373-7DBF01330F81";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 1.5354467417947133;
+	setAttr ".coi" 6.4252330757909144;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
