@@ -1,6 +1,10 @@
 //Maya ASCII 2017 scene
 //Name: Bank Model.ma
+<<<<<<< HEAD
 //Last modified: Tue, Apr 03, 2018 07:00:14 PM
+=======
+//Last modified: Tue, Apr 03, 2018 06:11:42 PM
+>>>>>>> parent of 6265f3b... Removed back of building
 //Codeset: 1252
 requires maya "2017";
 requires -nodeType "type" -nodeType "shellDeformer" -nodeType "vectorAdjust" -nodeType "vectorExtrude"
@@ -15,13 +19,22 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "C5FF610B-4021-0132-8F5C-AD9F413B832A";
 	setAttr ".v" no;
+<<<<<<< HEAD
 	setAttr ".t" -type "double3" -15.468345240522103 9.5527504003346735 -0.29439667828440452 ;
 	setAttr ".r" -type "double3" 326.06164728086935 -450.19999999994326 0 ;
+=======
+	setAttr ".t" -type "double3" 6.8639857944862595 13.015752908941636 14.717906104601843 ;
+	setAttr ".r" -type "double3" 344.06164728358704 18.999999999995964 0 ;
+>>>>>>> parent of 6265f3b... Removed back of building
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "7C8B340A-4A46-3892-9373-7DBF01330F81";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
+<<<<<<< HEAD
 	setAttr ".coi" 18.770469610495439;
+=======
+	setAttr ".coi" 15.96878992554638;
+>>>>>>> parent of 6265f3b... Removed back of building
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -87,12 +100,35 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+<<<<<<< HEAD
 	setAttr ".pv" -type "double2" 0.18644705414772034 0.16898244619369507 ;
+=======
+	setAttr ".pv" -type "double2" 0.51623740792274475 0.53207306563854218 ;
+>>>>>>> parent of 6265f3b... Removed back of building
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 36 ".pt[148:183]" -type "float3"  -3.7252903e-009 -9.8953024e-010 
+		9.0803951e-009 5.5879354e-009 -9.8953024e-010 9.0803951e-009 5.5879354e-009 8.7311491e-010 
+		9.0803951e-009 -3.7252903e-009 8.7311491e-010 9.0803951e-009 5.5879354e-009 -9.8953024e-010 
+		9.0803951e-009 -3.7252903e-009 -9.8953024e-010 9.0803951e-009 5.5879354e-009 8.7311491e-010 
+		9.0803951e-009 -3.7252903e-009 8.7311491e-010 9.0803951e-009 5.5879354e-009 -5.8207661e-011 
+		9.0803951e-009 -3.7252903e-009 -5.8207661e-011 9.0803951e-009 5.5879354e-009 -9.8953024e-010 
+		9.0803951e-009 -3.7252903e-009 -9.8953024e-010 9.0803951e-009 5.5879354e-009 -5.8207661e-011 
+		9.0803951e-009 -3.7252903e-009 -5.8207661e-011 9.0803951e-009 5.5879354e-009 -5.8207661e-011 
+		9.0803951e-009 -3.7252903e-009 -5.8207661e-011 9.0803951e-009 5.5879354e-009 -5.8207661e-011 
+		9.0803951e-009 -3.7252903e-009 -5.8207661e-011 9.0803951e-009 5.5879354e-009 -5.8207661e-011 
+		9.0803951e-009 -3.7252903e-009 -5.8207661e-011 9.0803951e-009 5.5879354e-009 -5.8207661e-011 
+		9.0803951e-009 -3.7252903e-009 -5.8207661e-011 9.0803951e-009 5.5879354e-009 -5.8207661e-011 
+		9.0803951e-009 -3.7252903e-009 -5.8207661e-011 9.0803951e-009 5.5879354e-009 -5.8207661e-011 
+		9.0803951e-009 -3.7252903e-009 -5.8207661e-011 9.0803951e-009 5.5879354e-009 -5.8207661e-011 
+		9.0803951e-009 -3.7252903e-009 -5.8207661e-011 9.0803951e-009 5.5879354e-009 -5.8207661e-011 
+		9.0803951e-009 -3.7252903e-009 -5.8207661e-011 9.0803951e-009 5.5879354e-009 -5.8207661e-011 
+		9.0803951e-009 -3.7252903e-009 -5.8207661e-011 9.0803951e-009 5.5879354e-009 8.7311491e-010 
+		9.0803951e-009 -3.7252903e-009 8.7311491e-010 9.0803951e-009 5.5879354e-009 -5.8207661e-011 
+		9.0803951e-009 -3.7252903e-009 -5.8207661e-011 9.0803951e-009;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pPipe1";
 	rename -uid "FE11D86B-40BA-0C78-7D9B-389D34867555";
@@ -275,7 +311,7 @@ createNode displayPoints -n "displayPoints1" -p "transform1";
 	setAttr ".hio" yes;
 createNode transform -n "pCube4";
 	rename -uid "AFAEFAB8-4F8C-C314-00BF-68AC6DB102A6";
-	setAttr ".t" -type "double3" 0 8.3548692684666381 0.18528713065629965 ;
+	setAttr ".t" -type "double3" 0 8.3548692684666381 0.1577392313225594 ;
 	setAttr ".s" -type "double3" 3.1787001322302029 1 0.243 ;
 createNode mesh -n "pCubeShape4" -p "pCube4";
 	rename -uid "07262D75-461F-C999-BF8B-E3BEA72F662B";
@@ -11395,6 +11431,7 @@ createNode polyExtrudeFace -n "polyExtrudeFace40";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" 5.4655352154647598 2.6214041375522905 4.4879492165982473 ;
 	setAttr ".cbx" -type "double3" 6.4655362585460434 2.6214041375522905 5.4879498126446951 ;
+<<<<<<< HEAD
 createNode polyTweak -n "polyTweak37";
 	rename -uid "CE533C7F-4662-7887-3AB4-709F4BE9FCE2";
 	setAttr ".uopa" yes;
@@ -12093,6 +12130,8 @@ createNode polyPlanarProj -n "polyPlanarProj24";
 	setAttr ".ro" -type "double3" 0 90 0 ;
 	setAttr ".ps" -type "double2" 4.7545369863510132 9.5684115886688232 ;
 	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+=======
+>>>>>>> parent of 6265f3b... Removed back of building
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -12126,7 +12165,11 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
+<<<<<<< HEAD
 connectAttr "polyPlanarProj24.out" "pCubeShape1.i";
+=======
+connectAttr "polyTweakUV31.out" "pCubeShape1.i";
+>>>>>>> parent of 6265f3b... Removed back of building
 connectAttr "polyTweakUV31.uvtk[0]" "pCubeShape1.uvst[0].uvtw";
 connectAttr "polyTweakUV7.out" "pPipeShape1.i";
 connectAttr "polyTweakUV7.uvtk[0]" "pPipeShape1.uvst[0].uvtw";
@@ -12794,6 +12837,7 @@ connectAttr "polyCloseBorder1.out" "polyExtrudeFace39.ip";
 connectAttr "pTorusShape2.wm" "polyExtrudeFace39.mp";
 connectAttr "polyExtrudeFace39.out" "polyExtrudeFace40.ip";
 connectAttr "pTorusShape2.wm" "polyExtrudeFace40.mp";
+<<<<<<< HEAD
 connectAttr "polyTweakUV31.out" "polyTweak37.ip";
 connectAttr "polyTweak37.out" "deleteComponent2.ig";
 connectAttr "typeMesh1.msg" "type1.transformMessage";
@@ -12932,6 +12976,8 @@ connectAttr "polyMapCut74.out" "polyMapCut75.ip";
 connectAttr "polyMapCut75.out" "polyMapCut76.ip";
 connectAttr "polyMapCut76.out" "polyPlanarProj24.ip";
 connectAttr "pCubeShape1.wm" "polyPlanarProj24.mp";
+=======
+>>>>>>> parent of 6265f3b... Removed back of building
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "typeBlinnSG.pa" ":renderPartition.st" -na;
