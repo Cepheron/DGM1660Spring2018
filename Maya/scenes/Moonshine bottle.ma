@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: Moonshine bottle.ma
-//Last modified: Wed, Apr 18, 2018 03:07:09 PM
+//Last modified: Wed, Apr 18, 2018 03:07:39 PM
 //Codeset: 1252
 requires maya "2017";
 currentUnit -l centimeter -a degree -t film;
@@ -13,8 +13,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "E2D78F6F-4B99-7FFA-DDAE-6D9C3C672DC4";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.088977614081705236 2.5032228693348317 4.3362408578196421 ;
-	setAttr ".r" -type "double3" -6.93835272961954 2.2000000000030608 -7.459923621959901e-017 ;
+	setAttr ".t" -type "double3" 0.0071850714189782283 3.1763974429489448 3.6252092091016794 ;
+	setAttr ".r" -type "double3" -27.938352729619485 0.60000000000316811 -4.9698891919644783e-017 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "9134F765-4EB6-E4E4-B132-B4997652EC37";
 	setAttr -k off ".v" no;
@@ -119,7 +119,7 @@ createNode mesh -n "pTorusShape1" -p "pTorus1";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pPipe1";
 	rename -uid "090FB963-4E69-103A-5C17-0CA88D125B37";
-	setAttr ".t" -type "double3" 0 1.3159443807617428 0 ;
+	setAttr ".t" -type "double3" 0 1.4058771692773882 0 ;
 	setAttr ".s" -type "double3" 1.0523298479698115 1.6357151348030141 1.0523298479698115 ;
 createNode mesh -n "pPipeShape1" -p "pPipe1";
 	rename -uid "81DCF3E5-4EE9-A7F1-679F-038098B55E12";
