@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: Moonshine bottle.ma
-//Last modified: Wed, Apr 18, 2018 02:04:33 PM
+//Last modified: Wed, Apr 18, 2018 02:23:30 PM
 //Codeset: 1252
 requires maya "2017";
 currentUnit -l centimeter -a degree -t film;
@@ -13,13 +13,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "E2D78F6F-4B99-7FFA-DDAE-6D9C3C672DC4";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.38384422307280219 2.9996456653873413 2.1162747298928308 ;
-	setAttr ".r" -type "double3" -2.7383527296435592 -10.600000000002007 -1.011178750278244e-016 ;
+	setAttr ".t" -type "double3" -1.4426421178445539 3.6696080115909697 4.4439758012456014 ;
+	setAttr ".r" -type "double3" -18.338352729622169 -17.800000000001379 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "9134F765-4EB6-E4E4-B132-B4997652EC37";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 2.3607355369643717;
+	setAttr ".coi" 4.8019995797428994;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -83,13 +83,33 @@ createNode mesh -n "pCylinderShape1" -p "pCylinder1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.49374988675117493 0.68843984603881836 ;
+	setAttr ".pv" -type "double2" 0.54374983906745911 0.68843984603881836 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 60 ".pt";
+	setAttr -s 81 ".pt";
+	setAttr ".pt[0]" -type "float3" -0.022929925 0 0.0074503799 ;
+	setAttr ".pt[1]" -type "float3" -0.019505361 0 0.014171468 ;
+	setAttr ".pt[2]" -type "float3" -0.014171472 0 0.019505352 ;
+	setAttr ".pt[3]" -type "float3" -0.007450385 0 0.022929914 ;
+	setAttr ".pt[4]" -type "float3" -2.8741278e-009 0 0.024109937 ;
+	setAttr ".pt[5]" -type "float3" 0.0074503799 0 0.022929912 ;
+	setAttr ".pt[6]" -type "float3" 0.014171466 0 0.019505348 ;
+	setAttr ".pt[7]" -type "float3" 0.019505348 0 0.014171462 ;
+	setAttr ".pt[8]" -type "float3" 0.022929909 0 0.0074503757 ;
+	setAttr ".pt[9]" -type "float3" 0.024109932 0 -4.3111918e-009 ;
+	setAttr ".pt[10]" -type "float3" 0.022929909 0 -0.007450385 ;
+	setAttr ".pt[11]" -type "float3" 0.019505346 0 -0.01417147 ;
+	setAttr ".pt[12]" -type "float3" 0.014171462 0 -0.019505352 ;
+	setAttr ".pt[13]" -type "float3" 0.0074503771 0 -0.022929914 ;
+	setAttr ".pt[14]" -type "float3" -2.1555959e-009 0 -0.024109937 ;
+	setAttr ".pt[15]" -type "float3" -0.0074503808 0 -0.022929912 ;
+	setAttr ".pt[16]" -type "float3" -0.014171466 0 -0.019505352 ;
+	setAttr ".pt[17]" -type "float3" -0.019505348 0 -0.014171469 ;
+	setAttr ".pt[18]" -type "float3" -0.022929909 0 -0.0074503841 ;
+	setAttr ".pt[19]" -type "float3" -0.024109932 0 -4.3111918e-009 ;
 	setAttr ".pt[61]" -type "float3" 1.7462298e-010 0 -1.1641532e-010 ;
 	setAttr ".pt[62]" -type "float3" -8.7311491e-010 0 -9.8953024e-010 ;
 	setAttr ".pt[63]" -type "float3" 0 0 1.1641532e-010 ;
@@ -186,20 +206,52 @@ createNode mesh -n "pTorusShape1" -p "pTorus1";
 		-0.057754453 0.079492107 -0.043052036 -0.030363314 0.093448654 -0.043052036 1.4695492e-008 
 		0.09825778;
 	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "pPipe1";
+	rename -uid "090FB963-4E69-103A-5C17-0CA88D125B37";
+	setAttr ".t" -type "double3" 0 1.3159443807617428 0 ;
+	setAttr ".s" -type "double3" 1.0523298479698115 1.6357151348030141 1.0523298479698115 ;
+createNode mesh -n "pPipeShape1" -p "pPipe1";
+	rename -uid "81DCF3E5-4EE9-A7F1-679F-038098B55E12";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.67500010132789612 0.625 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 40 ".pt[20:59]" -type "float3"  -1.4901161e-008 0 0 -9.3132257e-010 
+		0 0 -2.1420419e-008 0 0 7.4505806e-009 0 9.3132257e-010 -1.071021e-008 0 -9.3132257e-010 
+		5.3290705e-015 0 0 -3.259629e-009 0 0 -7.4505806e-009 0 9.3132257e-010 -6.519258e-009 
+		0 0 -1.4901161e-008 0 4.6566129e-010 1.5832484e-008 0 0 -1.4901161e-008 0 4.6566129e-010 
+		6.519258e-009 0 0 -2.3283064e-008 -3.7252903e-009 0 -1.4901161e-008 -1.8626451e-009 
+		-4.6566129e-010 -2.220446e-016 0 -9.3132257e-010 -1.1175871e-008 0 -9.3132257e-010 
+		-1.4901161e-008 0 9.3132257e-010 3.7252903e-008 0 0 -1.5832484e-008 0 -4.6566129e-010 
+		-5.9604645e-008 -9.3132257e-010 -1.3877788e-017 -1.8626451e-009 -1.8626451e-009 -2.3283064e-010 
+		-2.9802322e-008 0 0 2.9802322e-008 0 0 -8.3819032e-009 -7.4505806e-009 1.8626451e-009 
+		7.327472e-015 -7.4505806e-009 -9.3132257e-010 -1.4901161e-008 0 -3.7252903e-009 -4.6566129e-008 
+		-7.4505806e-009 9.3132257e-010 1.4901161e-008 3.7252903e-009 1.8626451e-009 1.8626451e-009 
+		-3.7252903e-009 -2.3283064e-010 6.146729e-008 -9.3132257e-010 -1.3877788e-017 1.8626451e-009 
+		-1.8626451e-009 0 2.9802322e-008 -3.7252903e-009 0 -2.9802322e-008 -1.4901161e-008 
+		9.3132257e-010 0 -3.7252903e-009 -2.7939677e-009 -2.220446e-016 7.4505806e-009 9.3132257e-010 
+		-6.519258e-009 -7.4505806e-009 3.7252903e-009 -2.9802322e-008 0 -9.3132257e-010 -1.3038516e-008 
+		3.7252903e-009 -4.6566129e-010 -3.7252903e-009 -1.8626451e-009 1.1641532e-009;
+	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "DF5A5391-4481-5AAD-6135-9EAB2A93438F";
+	rename -uid "BD162F41-4EDA-7F77-A744-ADB1278CF0AB";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "F0662489-4AAC-8BD4-6F4C-C9914C30CA26";
+	rename -uid "0837695D-4E25-DA30-EC0D-BBB0C573B678";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "FF5B973E-4BF4-07E5-1EA6-6C80D1553D66";
+	rename -uid "5EE59675-43F1-5BA9-34C1-578BA8C0629A";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "DCB8B43A-4508-8D8B-3E4F-3C8DB11B664E";
+	rename -uid "F6D45DA9-4DA6-DE70-5862-05B923FB57D8";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "E382959D-4212-DBDC-29FD-A6A05DE1B388";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "8BE6B9A5-4140-9695-D417-B5B528F1E9FC";
+	rename -uid "E4E8BF06-4D41-3D9B-7131-48AAD32DBA0A";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "11A0A83E-44C5-41AF-5BF0-69AF6E21EF51";
 	setAttr ".g" yes;
@@ -606,7 +658,7 @@ createNode polyExtrudeFace -n "polyExtrudeFace6";
 createNode polyTweak -n "polyTweak6";
 	rename -uid "4FCDBC91-492F-7474-0B11-FE9BA043815A";
 	setAttr ".uopa" yes;
-	setAttr -s 62 ".tk";
+	setAttr -s 60 ".tk";
 	setAttr ".tk[4]" -type "float3" -0.59270382 -2.3098342e-016 -3.7252903e-009 ;
 	setAttr ".tk[5]" -type "float3" 0 -6.6174449e-024 2.9802322e-008 ;
 	setAttr ".tk[10]" -type "float3" -0.59270364 -2.220446e-016 3.7252903e-009 ;
@@ -679,6 +731,9 @@ createNode polyExtrudeFace -n "polyExtrudeFace7";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -0.80098062574713702 2.5805665690175164 -0.075101619804691003 ;
 	setAttr ".cbx" -type "double3" -0.65077726975118078 2.5805665690175168 0.07510170485641833 ;
+createNode polyPipe -n "polyPipe1";
+	rename -uid "B9DA9741-41E2-A919-164F-D2844B35169E";
+	setAttr ".sc" 0;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -697,7 +752,7 @@ select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
 select -ne :initialShadingGroup;
-	setAttr -s 2 ".dsm";
+	setAttr -s 3 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
@@ -710,6 +765,7 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 connectAttr "polyExtrudeFace4.out" "pCylinderShape1.i";
 connectAttr "polyExtrudeFace7.out" "pTorusShape1.i";
+connectAttr "polyPipe1.out" "pPipeShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -747,4 +803,5 @@ connectAttr "pTorusShape1.wm" "polyExtrudeFace7.mp";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pCylinderShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pTorusShape1.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pPipeShape1.iog" ":initialShadingGroup.dsm" -na;
 // End of Moonshine bottle.ma
