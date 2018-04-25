@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: Bank Model.ma
-//Last modified: Wed, Apr 25, 2018 10:54:06 AM
+//Last modified: Wed, Apr 25, 2018 11:11:21 AM
 //Codeset: 1252
 requires maya "2017";
 requires -nodeType "type" -nodeType "shellDeformer" -nodeType "vectorAdjust" -nodeType "vectorExtrude"
@@ -15,13 +15,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "C5FF610B-4021-0132-8F5C-AD9F413B832A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 4.481839223547456 8.251943222101616 0.40210184348184841 ;
-	setAttr ".r" -type "double3" 339.86164728403776 463.79999999992657 0 ;
+	setAttr ".t" -type "double3" -10.564736694657244 11.454358801606077 17.740661381171201 ;
+	setAttr ".r" -type "double3" 342.26164728403768 331.79999999992634 -9.0223029139773434e-016 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "7C8B340A-4A46-3892-9373-7DBF01330F81";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 7.2626675052033587;
+	setAttr ".coi" 18.718133285867001;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -613,19 +613,19 @@ createNode mesh -n "pasted__pPipeShape3" -p "pasted__pPipe3";
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "DC22AB1E-4946-6B04-B476-9990E95D2420";
+	rename -uid "CCC0F62B-4B4B-4B95-D1D6-3FAD46AFBB05";
 	setAttr -s 10 ".lnk";
 	setAttr -s 10 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "F2D4F9E7-4123-7A2C-477A-B0B20FBAC8CB";
+	rename -uid "26B9FE32-4671-76E8-AF3A-4E86CEE00487";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "EF41AF1E-471A-2898-CA7E-359107B72C98";
+	rename -uid "185104DD-4AA0-204E-7833-CA81BB57C25E";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "1A514E0B-416F-9822-9E5D-BEB32C8AF8CD";
+	rename -uid "4FA68E59-486F-81EB-7B48-EB8351F3575F";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "5C45FF06-4A43-469F-07A8-7FB1BD003045";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "E15AE787-40AE-EC64-A05E-D6BADB6406E8";
+	rename -uid "CABFA85F-4CA8-6304-4900-318816126B44";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "4CABAB92-4DA2-0DCA-4C22-108B03579124";
 	setAttr ".g" yes;
