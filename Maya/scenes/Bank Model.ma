@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: Bank Model.ma
-//Last modified: Fri, Apr 27, 2018 05:00:23 PM
+//Last modified: Fri, Apr 27, 2018 05:08:38 PM
 //Codeset: 1252
 requires maya "2017";
 requires -nodeType "type" -nodeType "shellDeformer" -nodeType "vectorAdjust" -nodeType "vectorExtrude"
@@ -15,13 +15,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "C5FF610B-4021-0132-8F5C-AD9F413B832A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -2.3123874585660222 1.0118933409547197 4.3468841614511051 ;
-	setAttr ".r" -type "double3" 355.46164728350391 358.60000000001162 6.2138757676485029e-018 ;
+	setAttr ".t" -type "double3" -5.3170631523038709 3.0615987615508784 2.9383931830134133 ;
+	setAttr ".r" -type "double3" 350.66164728362975 303.79999999993487 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "7C8B340A-4A46-3892-9373-7DBF01330F81";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 2.9062820848624438;
+	setAttr ".coi" 1.4538772272328406;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -883,6 +883,12 @@ createNode mesh -n "pasted__pasted__pasted__pPipeShape3Orig3" -p "pasted__pasted
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
+createNode joint -n "joint2";
+	rename -uid "A0D0B426-4962-A242-9DAE-80968FB9A753";
+	setAttr ".t" -type "double3" -4.299 2.929 2.3042150527969625 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".radi" 0.50959486455255298;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "5A3BBCAF-4C63-3FCD-86C2-949AFC9A2B3D";
 	setAttr -s 18 ".lnk";
